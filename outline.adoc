@@ -1,3 +1,13 @@
+* *In scope*
+** How to build and run services that run on k8s from a dev perspective
+** Which tools & tech are worth investing time in
+** Best practices & common gotchas
+
+* *Out of scope*
+** How to operate or deploy a k8s cluster
+** Audience participation - this will be a whistle stop tour
+** k8s architecture - just treat it like a black box. We should cover this a little bit at least
+
 * Local development workflow
 ** http://skaffold.dev/docs[Skaffold] captures much of the workflow most devs need in a single tool
 *** It is a good starting point for understanding what a good local dev workflow looks like
@@ -25,7 +35,7 @@
 **
 
 * Remote build services
-
+** Tekton pipelines
 
 * Automated testing & Kubernetes
 ** KIND (Kubernetes in Docker)
