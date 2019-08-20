@@ -1,0 +1,62 @@
+* Local development workflow
+** http://skaffold.dev/docs[Skaffold] captures much of the workflow most devs need in a single tool
+*** It is a good starting point for understanding what a good local dev workflow looks like
+*** You might hit limitations - it is not possible yet to use a custom deploy step, for example
+** VSCode support
+** CLI tools - kubectx, k9s
+** Minikube, Docker Desktop
+
+* Approaches for building images from source
+** This means no Dockerfile needs to be created
+** In theory this is great because it can lead to much more consistency across app deployment
+** Fabric8s maven plugin
+** Jib
+** buildpacks.io
+
+* Image Tagging Strategies
+** Don't use latest ever
+** sha, timestamp, version
+
+* Using profiles
+** Many tools such as skaffold, kustomize & helm support profiles eg test, dev
+
+* Deployment
+** Image registries
+**
+
+* Remote build services
+
+
+* Automated testing & Kubernetes
+** KIND (Kubernetes in Docker)
+** Container structure tests
+
+* Debugging apps on Kubernetes
+** How to open up ports
+** telepresence
+** VSCode
+
+* Provisioning a persistent data store with your application
+** Brief talk about StatefulSets and PersistentVolumentClaims
+** crossplane.io could be a better solution in many cases
+
+* Packaging your service as a Cloud Native Application Bundle
+** Useful for releasing a product consisting of an image or into a secure network
+
+* Health monitoring and management of running services
+
+* Log aggregation
+
+* TLS Termination
+** Nginx ingress
+
+* Integrating with Kubernetes security
+
+* Externalised Configuration & Secrets
+** Spring Cloud k8s support
+
+* Service to Service communication & discovery
+
+* Ingress Controllers
+
+* Observability of applications
