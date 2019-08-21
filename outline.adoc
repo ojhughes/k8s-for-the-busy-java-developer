@@ -8,6 +8,21 @@
 ** Audience participation - this will be a whistle stop tour
 ** k8s architecture - just treat it like a black box. We should cover this a little bit at least
 
+* Kubernetes architecture & core concepts from 10,000 feet
+** What are
+*** pod
+*** deployment
+*** service
+*** *Bit skeptical about including stuff about actual k8s architecture, but we could touch on these components*
+*** kubelet
+*** kube-proxy
+*** api server
+*** scheduler
+*** controller manager
+*** reconciliation
+
+** Great info in this video https://www.youtube.com/watch?v=90kZRyPcRZw
+
 * Local development workflow
 ** http://skaffold.dev/docs[Skaffold] captures much of the workflow most devs need in a single tool
 *** It is a good starting point for understanding what a good local dev workflow looks like
@@ -15,6 +30,11 @@
 ** VSCode support
 ** CLI tools - kubectx, k9s
 ** Minikube, Docker Desktop
+
+* Visualising the cluster
+** Dashboard
+** https://github.com/vmware/octant[Octant]
+** VScode k8s extension
 
 * Approaches for building images from source
 ** This means no Dockerfile needs to be created
