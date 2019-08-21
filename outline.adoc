@@ -52,7 +52,7 @@
 
 * Deployment
 ** Image registries
-**
+** kubectl
 
 * Remote build services
 ** Tekton pipelines
@@ -64,7 +64,7 @@
 * Debugging apps on Kubernetes
 ** How to open up ports
 ** telepresence
-** VSCode
+** https://marketplace.visualstudio.com/items?itemName=ilevine.squash[VSCode Squash extension]
 
 * Provisioning a persistent data store with your application
 ** Brief talk about StatefulSets and PersistentVolumentClaims
