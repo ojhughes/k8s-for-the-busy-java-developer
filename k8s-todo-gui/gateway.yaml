@@ -1,0 +1,45 @@
+apiVersion: install.istio.io/v1alpha2
+kind: IstioControlPlane
+spec:
+  autoInjection:
+    enabled: false
+  configManagement:
+    enabled: false
+  defaultNamespace: istio-system
+  gateways:
+    components:
+      egressGateway:
+        enabled: false
+      ingressGateway:
+        enabled: true
+        k8s:
+          hpaSpec:
+            maxReplicas: 5
+            metrics:
+            - resource:
+                name: cpu
+                targetAverageUtilization: 80
+              type: Resource
+            minReplicas: 1
+            scaleTargetRef:
+              apiVersion: apps/v1
+              kind: Deployment
+              name: istio-ingressgateway
+          resources:
+            limits:
+              cpu: 2000m
+              memory: 1024Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+    enabled: true
+  hub: gcr.io/istio-release
+  policy:
+    enabled: false
+  security:
+    enabled: false
+  tag: release-1.3-latest-daily
+  telemetry:
+    enabled: false
+  trafficManagement:
+    enabled: false
