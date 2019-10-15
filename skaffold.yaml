@@ -1,0 +1,6 @@
+apiVersion: skaffold/v1beta14
+kind: Config
+build:
+  artifacts:
+  - image: docker.io/ojhughes/todo-gui
+    context: k8s-todo-gui
