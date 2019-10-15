@@ -1,6 +1,13 @@
-apiVersion: skaffold/v1beta14
+apiVersion: skaffold/v1beta15
 kind: Config
+metadata:
+  name: kubernetes-for-the-busy-java-developer
 build:
   artifacts:
   - image: docker.io/ojhughes/todo-gui
+
     context: k8s-todo-gui
+deploy:
+  kubectl:
+    manifests:
+    - k8s/*

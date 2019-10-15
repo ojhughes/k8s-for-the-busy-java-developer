@@ -13,21 +13,21 @@ spec:
   selector:
     app: todo-gui
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
-metadata: 
+metadata:
   name: todo-gui-ingress-nginx
   namespace: default
   annotations:
     kubernetes.io/ingress.class: nginx
-spec: 
+spec:
   tls:
   - hosts:
     - ui.kubedemo.xyz
     secretName: ui.kubedemo.xyz.tls
-  rules: 
+  rules:
   - host: ui.kubedemo.xyz
-    http: 
+    http:
       paths: 
       - path: /
         backend: 
