@@ -1,0 +1,20 @@
+= Exposing your application to the public
+
+In this section we will explore some of the considerations making apps available on the internet.
+One of the major benefits of k8s is how it makes exposing an app very simple however the process is more nuanced
+than it looks at first glance - the simplest way is not necessarily the most sensible choice long term.
+
+== Services
+
+=== LoadBalancer
+In our previous example, we utilised a a `LoadBalancer` service. This is by far the quickest way
+to expose a deployment.
+
+[graphviz, dot-example, svg]
+----
+digraph g {
+    "Public Cloud load balancer with public IP address" -> "Kubernetes LoadBalancer service"
+    "Kubernetes LoadBalancer service" -> "Pod A"
+    "Kubernetes LoadBalancer service" -> "Pod B"
+}
+----
