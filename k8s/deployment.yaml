@@ -4,7 +4,7 @@ metadata:
   name: todo-gui-svc
   namespace: default
 spec:
-  ports: 
+  ports:
   - port: 80
     name: http
     protocol: TCP
@@ -12,6 +12,12 @@ spec:
   type: ClusterIP
   selector:
     app: todo-gui
+#  ports:
+#  - port: 80
+#    targetPort: 4200
+#  type: LoadBalancer
+#  selector:
+#    app: todo-gui
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
@@ -28,9 +34,9 @@ spec:
   rules:
   - host: ui.kubedemo.xyz
     http:
-      paths: 
+      paths:
       - path: /
-        backend: 
+        backend:
           serviceName: todo-gui-svc
           servicePort: 80
 ---
